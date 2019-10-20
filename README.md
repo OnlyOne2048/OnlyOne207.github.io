@@ -3,8 +3,52 @@
 
 **一、java学习笔记**  
 -------  
-1.java是一门面向对象的编程语言  
-2.java 中区分大小写   
+**10月20日笔记**  
+今天学习了java的重写(override),要点如下:  
+&ensp;&ensp;1.重写是一种建立在继承关系上对父类方法的改写。  
+&ensp;&ensp;2.重写代码应放在需要重写的子类中,以方法的形式,并且方法描述与父类完全一致,而重写内容放在方法内。  
+&ensp;&ensp;3.重写中若有返回值,则子类返回值必须小于或等于父类返回值。  
+另外在我写代码的过程中我犯了一个错误：误将其他类写在main函数中，程序总是报错。应当写在main方法外、主类（就是包含main函数的那个类，不知道具体叫什么）中。  
+测试代码如下(注释掉的部分分就是重写):  
+```
+package yuqiang.com;
+
+public class textInstance {
+	public static void main(String[] args) {
+		
+		SStudent gStudent=new SStudent();
+		gStudent.run();
+
+		
+	}
+	
+	
+	
+
+}
+class vehicle{
+		public void run() {
+			System.out.println("跑!");
+		}
+		
+		public void  stop() {
+			System.out.println("停!");
+		}
+		
+	}
+	
+	class SStudent extends vehicle{
+		public SStudent() {
+			
+		}
+		/*public void run() {
+			System.out.println("学生坐车!");
+		}*/
+		
+	}  
+```
+
+   
 
 **二、git学习笔记**  
 -------
