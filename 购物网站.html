@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="主页.css"/>
+    <title>Document</title>
+    <style type="text/css">    
+    </style>
+
+    <script>
+        function back(){
+         window.history.back();
+        }
+
+        function go(){
+            window.history.forward();
+        }
+
+        function landing(){
+         open();
+        }
+
+        function getTime(){
+		//获取系统时间。
+
+		var dateTime=new Date();
+		var hh=dateTime.getHours();
+		var mm=dateTime.getMinutes();
+		var ss=dateTime.getSeconds();
+		
+		//分秒时间是一位数字，在数字前补0。
+		mm = extra(mm);
+		ss = extra(ss);
+		
+		//将时间显示到ID为time的位置，时间格式形如：19:18:02
+		document.getElementById("time").innerHTML="现在是"+hh+"时"+mm+"分";
+		
+		//每隔1000ms执行方法systemTime()。
+		setTimeout("getTime()",1000);
+    }
+
+    //补位函数。
+	function extra(x)
+	{
+		//如果传入数字小于10，数字前补一位0。
+		if(x < 10)
+		{
+			return "0" + x;
+		}
+		else
+		{
+			return x;
+		}
+	}
+
+  
+    </script>
+  
+</head>
+<body onload="getTime()">
+
+    
+
+        <div id="time">
+            </div>
+    <!-- /*<a href="注册.html">注册</a>*/ -->
+    <div id="page_wrapper" >
+
+        <div id="masthead" style="color:black;"> <!--页眉区-->
+            
+            <div id="h">
+            <h style="margin-bottom:0;">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Go Shopping!</h>
+            </div>
+            <div id="where">
+                
+                <button type="button" id="back" onclick="back()"><img src="后退.png" ></button><!-- </button>图片按钮的应用 -->
+                
+                
+            
+                <button type="button" id="go" onclick="go()"><img src="前进.png" ></button>
+            
+            </div>
+
+            <div class="topnav">
+                <input type="text" placeholder="搜索..">
+              </div>
+
+
+            <div id="register_button"> 
+            <a   href="注册.html">
+                <button  class="button" type="button" id="register" >注册</button>
+            </a>
+            &ensp;&ensp;
+            <a   href="登陆.html">
+                <button  class="button" type="button"  id="land">登陆</button>
+            </a>
+
+
+
+
+            </div>
+ 
+
+        </div>
+
+    <div id="left_col" style="color:black" ><!--左侧导航区-->
+       <a href="https://www.taobao.com/markets/nvzhuang/taobaonvzhuang?spm=a21bo.2017.201867-main.1.5af911d9NzEmSB" >女装</a><br>
+       <a href="https://www.taobao.com/markets/nanzhuang/2017new?spm=a21bo.2017.201867-main.2.5af911d9NzEmSB">男装</a><br>
+       <a href="https://www.taobao.com/markets/3c/tbdc?spm=a21bo.2017.201867-main.11.5af911d9HixkXN">数码</a>
+       <a href="https://s.taobao.com/search?spm=a21bo.2017.201867-main.25.5af911d9HixkXN&q=%E7%BE%8E%E9%A3%9F&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20180724&ie=utf8"></a><br>
+       <a href="https://www.taobao.com/markets/bangong/pchome?spm=a21bo.2017.201867-main.40.5af911d9HixkXN&wh_ttid=pc">办公</a><br>
+       <a href="https://s.taobao.com/list?spm=a21bo.2017.201867-main.43.5af911d9HixkXN&source=youjia&q=%E7%99%BE%E8%B4%A7">百货</a><br>
+       <a href="https://xue.taobao.com/?spm=a21bo.2017.201867-main.46.5af911d9HixkXN">学习</a><br>
+       <a href="">美食</a><br>
+       <a href="">电脑</a><br>
+       <a href="">手机</a><br>
+       <a href="">生鲜</a><br>
+       <a href="">装修</a><br>
+       <a href="">工具</a><br>
+       <a href="">汽车</a><br>
+       <a href="">零食</a><br>
+       <a href="">卡券</a><br>
+       <a href="">手表</a><br>
+       <a href="">眼镜</a><br>
+       <a href="">健康</a><br>
+       <a href="">运动</a><br>
+       <a href="">宠物</a><br>
+       <a href="">母婴</a><br>
+
+    </div>
+
+
+    <div id="page_content"><!--页面内容区-->
+        <div id="investigate"> 
+
+
+            <a href="问卷调查.html">
+                <button type="button" id="button_investigate" >做问卷，赢大奖！</button>
+            </a>
+
+
+
+        </div>
+
+
+
+        <div class="one">
+            <div class="things">
+        <img src="衣服.jpg_.webp">
+            </div>
+          <div class="text">
+              
+        <a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+            洛巴伦 休闲男士外套</a>
+            </div>       
+       </div>
+
+
+       <div class="one">
+        <div class="things">
+    <img src="衣服.jpg_.webp">
+        </div>
+      <div class="text">
+            
+    <a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+        洛巴伦 休闲男士外套
+        </div>       
+   </div>
+
+   <div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+       
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套</a>
+    </div>       
+</div>
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+<div class="one">
+    <div class="things">
+<img src="衣服.jpg_.webp">
+    </div>
+  <div class="text">
+        
+<a href="https://market.m.taobao.com/app/tb-source-app/aiguangjiepc/content/index.html?spm=a21bo.2017.201870.1.5af911d9RD5KKS&contentId=4000000234332289588&scm=1007.12846.65991.0&pvid=3f4004e1-ad81-488f-ac0b-e9ff81806a2f">
+    洛巴伦 休闲男士外套
+    </div>       
+</div>
+
+
+
+    </div>
+
+
+
+
+
+    </div>
+        
+
+    
+</body>
+</html>
