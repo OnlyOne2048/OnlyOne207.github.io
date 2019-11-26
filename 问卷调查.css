@@ -1,0 +1,79 @@
+
+#time{
+    position: relative;
+    
+    font-size: 30px;
+    float: right;
+
+
+
+}
+#where{
+    position: relative;
+    float: left;
+    border: none;
+
+
+
+}
+
+#all{
+
+    position: absolute;;
+    left: 280px;
+    border:2px solid darkslategray;
+    width: 50%;
+    height:150%;
+    padding: 100px;
+ 
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+#head{
+    position: relative;
+    font-size: 25pt;
+    color:  #06a7e2;
+    
+    text-align: center;
+    
+    
+}
+
+#content{
+    text-align: left;
+    height: 100%;
+    
+
+
+}
+#input{
+    border-radius: 2px;/* 边框弧度*/
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    font-family: 'microsoft yahei';
+    margin-top: 20px;
+    background-color:#06a7e2;/*按钮颜色 */
+    border: none;/*边框无*/
+    color: white;/* 按钮颜色*/
+    display: inline-block;/*框的类型为行内块元素 */
+    font-size: 16px;/* 按钮字体大小*/
+    padding: 20px 40px;/*内边距。顺时针 */
+    text-decoration: none;/*规定添加到文本的修饰为无 */
+    
+    position:relative;
+    left:0px;
+}
+

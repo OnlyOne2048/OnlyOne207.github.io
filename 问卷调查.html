@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="问卷调查.css"/>
+</head>
+<script>
+    function getTime(){
+		//获取系统时间。
+		var dateTime=new Date();
+		var hh=dateTime.getHours();
+		var mm=dateTime.getMinutes();
+		var ss=dateTime.getSeconds();
+		
+		//分秒时间是一位数字，在数字前补0。
+		mm = extra(mm);
+		ss = extra(ss);
+		
+		//将时间显示到ID为time的位置，时间格式形如：19:18:02
+		document.getElementById("time").innerHTML=hh+":"+mm+":"+ss;
+		
+		//每隔1000ms执行方法systemTime()。
+		setTimeout("getTime()",1000);
+    }
+
+    //补位函数。
+	function extra(x)
+	{
+		//如果传入数字小于10，数字前补一位0。
+		if(x < 10)
+		{
+			return "0" + x;
+		}
+		else
+		{
+			return x;
+		}
+	}
+
+
+
+
+
+    function thanks(form){
+        
+       
+        alert("感谢您的支持！点击确认返回首页！");      
+        open('主页.html') ;
+
+
+
+       
+
+        
+
+    }
+
+
+
+    function back(){
+         window.history.back();
+        }
+
+    function go(){
+         window.history.forward();
+        }
+   
+
+  
+
+
+   
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<body onload="getTime()">
+
+    <div id="where">
+        <button type="button" id="back" onclick="back()"><img src="后退.png" ></button>
+        <a href="主页.html"><img src="主页.png" ></a>
+        <button type="button" id="go" onclick="go()"><img src="前进.png" ></button>
+    </div>
+
+
+    
+
+    <div id="time">
+        </div>
+   
+    <div id="all">
+    
+
+        <div>
+            <div id="head">
+                    
+                  
+                    
+                <h></h>顾客满意度调查</p>
+                
+            </div>
+
+            <div id="statement">
+                <p>尊敬的顾客：</p>
+                <p>&ensp;&ensp;&ensp;&ensp;您好！感谢您在百忙之中填写问卷，请您根据自己的实际感受和看法如实填写，本问卷采用匿名形式，所有数据仅供了
+                    解顾客的满意度情况，不针对个别数据研究。</p>
+                    <hr>
+            </div>
+        <form onsubmit="return thanks(this)">
+
+            <div id= concent">
+                
+                
+                
+              
+                <div id="contentid">
+
+
+                    <p value="1" name="age">1.您的年龄？</p>
+                    <input name="age"  type="radio">
+                    <label for="ofen">18~25</label>
+                    <input name="age"  type="radio">
+                    <label for="general">26~35</label>
+                    <input name="age"  type="radio">
+                    <label for="seldom">35~45</label>
+                    <input name="age"  type="radio">
+                    <label for="never">45以上</label>
+                    <br><br><br>
+
+
+
+                    <p value="1" name="gender">2.您的性别？</p>
+                    <input name="gender"  type="radio">
+                    <label for="男">男</label>
+                    <input name="gender"  type="radio">
+                    <label for="女">女</label>
+                    <br><br><br>
+                   
+
+
+
+                    <p value="1" name="how_offen">3.您一般一周在网上购物几次？</p>
+                    <input name="how offen"  type="radio">
+                    <label for="ofen">4次以上</label>
+                    <input name="how offen"  type="radio">
+                    <label for="general">2到3次</label>
+                    <input name="how offen"  type="radio">
+                    <label for="seldom">一次</label>
+                    <input name="how offen"  type="radio">
+                    <label for="never">几乎没有</label>
+                    <br><br><br>
+
+                    <p value="1" name="which_thing">4.您一般在网上购买哪些商品？</p>
+                    <input name="which_thing"  type="radio">
+                    <label for="电子设备">电子设备</label>
+                    <input name="which_thing"  type="radio">
+                    <label for="衣裤鞋帽">衣裤鞋帽</label>
+                    <input name="which_thing"  type="radio">
+                    <label for="化妆品">化妆品</label>
+                    <input name="which_thing"  type="radio">
+                    <label for="食品">食品</label>
+                    <br><br><br>
+                
+
+                    <p value="1" name="quality">5.您觉得本网站上的商品怎么样？(两个)</p>
+                    <input name="quality"  type="radio">
+                    <label for="物美价廉">质量好</label>
+                    <input name="quality"  type="radio">
+                    <label for="general">质量差</label>
+                    <input name="price"  type="radio">
+                    <label for="价格贵">价格贵</label>
+                    <input name="price"  type="radio">
+                    <label for="价格便宜">价格便宜</label>
+                    <br><br><br>
+                
+
+                    <p value="1" name="suggestion">6.您对本网站的建议？</p>
+                    <textarea rows="8" cols="50"></textarea><!-- 多行文本框 -->
+                    <br><br><br>
+
+
+
+                    <input type="submit" id="input" >
+                    
+        
+                
+                
+                </div>
+
+            </div>
+        </form>
+            
+                
+     </div>        
+</body>
+</html>

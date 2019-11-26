@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function back(){
+        window.history.back();
+        }
+
+        function go(){
+         window.history.go();
+        }
+
+        function getTime(){
+		//获取系统时间。
+		var dateTime=new Date();//获取系统时间
+		var hh=dateTime.getHours();//获取小时
+		var mm=dateTime.getMinutes();//获取分钟
+		var ss=dateTime.getSeconds();//获取秒
+		
+		//分秒时间是一位数字，在数字前补0。
+		mm = extra(mm);
+		ss = extra(ss);
+		
+		//将时间显示到ID为time的位置，时间格式形如：19:18:02
+		document.getElementById("time").innerHTML=hh+":"+mm+":"+ss;
+		
+		//每隔1000ms执行方法systemTime()。
+		setTimeout("getTime()",1000);
+    }
+
+    //补位函数。
+	function extra(x)
+	{
+		//如果传入数字小于10，数字前补一位0。
+		if(x < 10)
+		{
+			return "0" + x;
+		}
+		else
+		{
+			return x;
+		}
+	}
+
+
+
+    
+    
+    </script>
+
+
+
+
+    <style type="text/css">
+    #time{
+    position: relative;
+    float:right;
+    font-size: 30px;}
+    .text{
+        font-size: 20px;
+    }   
+    
+    </style>
+</head>
+<body onload="getTime()" style="background-color:#f9f9f9;">
+
+    <!-- 前进后退按钮与时间-->
+    <div style="" >
+            <div id="where">
+                    <button type="button" id="back" onclick="back()"><img src="后退.png" ></button><!-- </button>图片按钮的应用 -->
+                    <a href="主页.html"><img src="主页.png" ></a>
+                    <button type="button" id="go" onclick="go()"><img src="前进.png" ></button>
+
+
+            <!-- 时间 -->
+            <div id="time" ></div>
+            </div>
+
+    
+    </div>
+
+
+   
+
+    <!-- 登陆主块 -->
+    <div style="width: 50%;height: 100%;position: relative;text-align: center;top: 50%;padding: 500px;padding: 50px 0px 0px 0px;left: 380px;background-color:#f9f9f9;;">
+        <!-- 登陆标题 -->
+        <div style="">
+            <h style="font-size: 30px;">登陆</h>
+        </div>
+
+        <!-- 登陆表单 -->
+        <div style="padding: 80px 0px 0px 0px;" >
+            <form>
+                <p class="text">账号<input type="tel"  placeholder="请输入您是手机号"></p>
+                <p class="text">密码<input type="password"></p>
+                <!-- 提交按钮 -->
+                <div style="padding:30px 0px 0px 0px">
+                    <input type="submit" class="text" style="background-color: #06a7e2;border: none;">
+                    <button type="button" class="text" style="background-color: #06a7e2;border: none;">忘记密码</button>
+                </div>
+
+            </form>
+
+
+        </div>
+
+       
+
+
+
+
+    </div>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+body{
+    background-color:#f9f9f9;
+}
+
+#time{
+    position: relative;
+    float:right;
+    font-size: 30px;
+}
+
+#register{
+    
+    
+     width:400px;/*设置块的宽度 */
+   
+    position:relative;/*设置块的定位类型为相对定位*/
+    left:500px;/*向块的左边添加500px，即向右移动*/
+    border-radius: 2px;
+    
+   
+
+   
+
+}
+
+#remand{
+    
+    text-align: center;/*文字居中*/
+    position: relative;
+}
+
+#form{
+    text-align: right;/*文本对齐方式为向右对齐 */
+    position:relative;/*对位类型为相对*/
+    left:400px;/*右移400px */
+
+
+}
+
+#MemberType{
+    position: relative;
+    left:25px;
+
+
+}
+#register_botten{
+    display: block;
+    width: 312px;
+    height: 44px;
+    line-height: 44px;
+    border: 0;
+    border-radius: 2px;
+    outline: 0;
+    background-color: #06a7e2;
+    font-size: 14px;
+    font-family: 'microsoft yahei';
+    color: #fff;
+    position: relative;
+    left:90px;
+    
+    
+
+}
+.input_border{
+    display: inline-block;
+   
+    
+    
+
+}
